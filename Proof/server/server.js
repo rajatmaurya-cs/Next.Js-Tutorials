@@ -55,7 +55,7 @@ app.get("/api/images",ensureDb, async (req, res, next) => {
 
     const images = await Upload.find().sort({ createdAt: -1 });
 
-    console.log(images)
+   
 
     return res.status(200).json({
       success: true,
@@ -69,6 +69,53 @@ app.get("/api/images",ensureDb, async (req, res, next) => {
     });
   }
 });
+
+
+app.delete("/api/images/delete/:id", ensureDb, async (req, res) => {
+  try {
+    console.log("Entered DELETE API");
+
+    const { id } = req.params;
+    
+    console.log("Deleting ID:", id);
+
+    if (!id) {
+      return res.status(400).json({
+        success: false,
+        message: "Image ID is required",
+      });
+    }
+
+    const deletedImage = await Upload.findByIdAndDelete(id);
+
+    if (!deletedImage) {
+      return res.status(404).json({
+        success: false,
+        message: "Image not found",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Image deleted successfully",
+      data: deletedImage,
+    });
+
+  } catch (error) {
+    console.error("Delete Error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+    });
+  }
+});
+
+
+
+
+
+
 
 
 

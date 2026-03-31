@@ -1,7 +1,9 @@
 // lib/api.ts
 export const getBlogs = async () => {
+
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/images`, {
     next: { revalidate: 60 },
+     cache: "no-store", 
   });
 
   if (!res.ok) {

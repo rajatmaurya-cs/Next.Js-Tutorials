@@ -1,6 +1,6 @@
 // components/BlogList.tsx
-
 import Image from "next/image";
+import DeleteButton from "./DeleteButton";
 
 type Blog = {
   _id: string; // ✅ fixed
@@ -32,6 +32,10 @@ const BlogList = ({ blogs }: { blogs: Blog[] }) => {
               {blog.description}
             </h2>
           </div>
+
+            {/* ✅ Works inside SSR */}
+          <DeleteButton id={blog._id} />
+
         </div>
       ))}
     </div>
