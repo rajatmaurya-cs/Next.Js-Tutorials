@@ -24,14 +24,14 @@ const router = useRouter();
        <button
        className="border-3 border-yellow-300 p-3 rounded-full"
         onClick={() => {
-          router.push(`/Test/${params.username}/settings`);
+          router.push(`/CSR/${params.username}/settings`);
         }}
       >
         Go to Settings ⚙️
       </button>
 
       <Link
-  href={`/Test/${params.username}/settings`}
+  href={`/CSR/${params.username}/settings`}
   className="border-3 border-yellow-300 p-3 rounded-full inline-block"
 >
   Go to Settings Link ⚙️
@@ -51,7 +51,7 @@ const router = useRouter();
       <button
        className="border-3 border-yellow-300 p-3 rounded-full"
         onClick={() => {
-          window.location.reload();
+         window.location.reload();
         }}
       >
         Refresh Page ⚙️

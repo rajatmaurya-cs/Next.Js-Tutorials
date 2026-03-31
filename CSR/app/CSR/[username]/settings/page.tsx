@@ -15,7 +15,7 @@ export default function Dynamic() {
       <button
          className="border-3 border-yellow-300 p-3 rounded-full w-50"
         onClick={() => {
-          router.push(`/Test/${params.username}`);
+          router.push(`/CSR/${params.username}`);
         }}
       >
         Go to Home ⚙️

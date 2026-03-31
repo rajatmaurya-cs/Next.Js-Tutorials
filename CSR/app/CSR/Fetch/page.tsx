@@ -77,7 +77,7 @@ export default function Page() {
 
       {users.map((user) => (
 
-        <Link href={`/Test/Fetch/${user.id}`}
+        <Link href={`/CSR/Fetch/${user.id}`}
          key={user.id} 
          className="border-yellow-300 border-2 p-3 rounded-2xl mb-5">
           {user.firstName} {user.lastName}
