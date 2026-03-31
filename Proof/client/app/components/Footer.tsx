@@ -4,7 +4,7 @@ import Link from "next/link";
 /* ================= CONFIG (SCALABLE) ================= */
 const quickLinks = [
   { name: "Home", href: "/" },
-  { name: "Blogs", href: "/blogs" },
+  { name: "Blogs", href: "https://3w-task1-fronted.vercel.app/Home" },
   { name: "Dashboard", href: "/dashboard" },
   { name: "Contact", href: "/contact" },
 ];

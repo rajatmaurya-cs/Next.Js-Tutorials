@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
 
       {/* Navigation Links */}
       <div className="flex gap-6 text-gray-700 font-medium">
-        <Link href="/" className="hover:text-blue-600 transition">
+        <Link href="https://3w-task1-fronted.vercel.app/Home" className="hover:text-blue-600 transition">
           Home
         </Link>
 
